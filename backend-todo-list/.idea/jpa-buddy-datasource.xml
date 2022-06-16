@@ -2,7 +2,7 @@
 <project version="4">
   <component name="JpbDataSourceConfig">
     <data-sources>
-      <data-source id="e6377468-d0bd-4d6b-a1d1-de438f347c7d" name="tod_list" url="jdbc:mysql://localhost/todo_list" driverClass="com.mysql.cj.jdbc.Driver" />
+      <data-source id="e6377468-d0bd-4d6b-a1d1-de438f347c7d" name="todo_list" url="jdbc:mysql://localhost/todo_list" driverClass="com.mysql.cj.jdbc.Driver" />
     </data-sources>
   </component>
 </project>

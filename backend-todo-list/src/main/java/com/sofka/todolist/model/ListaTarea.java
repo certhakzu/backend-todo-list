@@ -43,7 +43,7 @@ public class ListaTarea {
     }
 
     public ListaTarea(String nameLista, List<Tarea> tareaList) {
-        this.nameLista = nameLista;
+        this.nameLista = nameLista.toUpperCase();
         this.tareaList = tareaList;
     }
 
