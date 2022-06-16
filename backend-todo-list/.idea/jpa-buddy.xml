@@ -2,5 +2,7 @@
 <project version="4">
   <component name="JpaBuddyIdeaProjectConfig">
     <option name="defaultUnitInitialized" value="true" />
+    <option name="reverseEngineeringLastDbConnectionId" value="e6377468-d0bd-4d6b-a1d1-de438f347c7d" />
+    <option name="reLastEntityCreationPackage" value="src/main/java/com/sofka/todolist" />
   </component>
 </project>
