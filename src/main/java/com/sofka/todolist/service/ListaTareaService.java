@@ -17,26 +17,30 @@ public class ListaTareaService {
         return listaTareaRepository.findAll();
     }
 
-    public void addListaDeTareas(ListaTarea listaTarea){
-        listaTareaRepository.save(listaTarea);
+    public ListaTarea getListaDeTareasById(Integer id){
+        return listaTareaRepository.findById(id).get();
+    }
+    public ListaTarea addListaDeTareas(ListaTarea listaTarea){
+        listaTarea.setTareaList(null);
+        return listaTareaRepository.save(listaTarea);
     }
 
-    public void deleteListaDeTareas(Integer id){
+    public void deleteListaDeTareasById(Integer id){
         listaTareaRepository.deleteById(id);
     }
 
-    public void editListaDeTareas(ListaTarea listaTarea){
-        if (existListaDeTareas(listaTarea)){
+    public void editListaDeTareas(Integer id, ListaTarea nuevaListaTarea){
+        if (existListaDeTareas(id)){
             for (int i = listaTareaRepository.findAll().size() - 1; i > -1; i--){
-                if (listaTarea.equals(listaTareaRepository.findAll().get(i))){
-                    listaTareaRepository.deleteById(listaTarea.getId());
-                    listaTareaRepository.save(listaTarea);
+                if (nuevaListaTarea.equals(listaTareaRepository.findAll().get(i))){
+                    listaTareaRepository.deleteById(id);
+                    listaTareaRepository.save(nuevaListaTarea);
                 }
             }
         }
     }
 
-    public Boolean existListaDeTareas(ListaTarea listaTarea){
-        return listaTareaRepository.existsById(listaTarea.getId());
+    public Boolean existListaDeTareas(Integer id){
+        return listaTareaRepository.existsById(id);
     }
 }
