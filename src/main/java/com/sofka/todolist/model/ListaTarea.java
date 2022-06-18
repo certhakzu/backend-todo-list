@@ -15,7 +15,10 @@ public class ListaTarea {
     @Column(name = "name_lista", nullable = false, length = 30)
     private String nameLista;
 
-    @OneToMany(mappedBy = "listaTareas", cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER,
+            targetEntity = Tarea.class,
+            cascade = CascadeType.REMOVE,
+            mappedBy = "listaTareas")
     private List<Tarea> tareaList = new ArrayList<>();
 
     public Integer getId() {

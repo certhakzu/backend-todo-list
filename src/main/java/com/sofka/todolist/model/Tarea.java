@@ -15,14 +15,14 @@ public class Tarea {
     @Column(name = "description_tarea", nullable = false, length = 60)
     private String descriptionTarea;
 
-    @Lob
     @Column(name = "is_complete", nullable = false)
-    private String isComplete;
+    private boolean isComplete;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "lista_tareas_id", nullable = false)
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)// ayuda a manejar la posibles LAZY Exception que se pueden generar
     private ListaTarea listaTareas;
+
 
     public Integer getId() {
         return id;
@@ -40,11 +40,11 @@ public class Tarea {
         this.descriptionTarea = descriptionTarea;
     }
 
-    public String getIsComplete() {
+    public Boolean getIsComplete() {
         return isComplete;
     }
 
-    public void setIsComplete(String isComplete) {
+    public void setIsComplete(Boolean isComplete) {
         this.isComplete = isComplete;
     }
 
@@ -56,7 +56,7 @@ public class Tarea {
         this.listaTareas = listaTareas;
     }
 
-    public Tarea(String descriptionTarea, String isComplete, ListaTarea listaTareas) {
+    public Tarea(String descriptionTarea, Boolean isComplete, ListaTarea listaTareas) {
         this.descriptionTarea = descriptionTarea;
         this.isComplete = isComplete;
         this.listaTareas = listaTareas;
