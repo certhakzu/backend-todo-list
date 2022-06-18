@@ -1,8 +1,0 @@
-com\sofka\todolist\TodolistApplication.class
-com\sofka\todolist\repository\ListaTareaRepository.class
-com\sofka\todolist\service\TareaService.class
-com\sofka\todolist\repository\TareaRepository.class
-com\sofka\todolist\controller\ListaTareaController.class
-com\sofka\todolist\model\Tarea.class
-com\sofka\todolist\model\ListaTarea.class
-com\sofka\todolist\service\ListaTareaService.class

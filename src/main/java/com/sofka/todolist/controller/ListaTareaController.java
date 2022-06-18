@@ -7,8 +7,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin("*")
 @RestController
-@RequestMapping("/lista_tareas")
+@RequestMapping("/listatareas")
 public class ListaTareaController {
 
     @Autowired
@@ -45,7 +46,7 @@ public class ListaTareaController {
 
             listaTareaService.addListaDeTareas(listaTareaExistente);
         }catch (Exception exception){        }
-        listaTareaService.editListaDeTareas(id, listaTarea);
+        //listaTareaService.editListaDeTareas(id, listaTarea);
     }
 
 }
